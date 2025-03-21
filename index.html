@@ -13,8 +13,6 @@
             color: #f0f0f0;
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
-        
-
         }
         .navbar {
             width: 100%;
@@ -127,12 +125,42 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             white-space: nowrap;
+            gap: 10px;
+            padding: 10px;
         }
         .gallery img {
-            width: 100%;
-            max-width: 400px;
-            margin: 10px;
+            width: auto;
+            height: 250px;
+            object-fit: contain;
             border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+        .lightbox.active {
+            display: flex;
         }
         .footer {
             text-align: center;
@@ -149,7 +177,7 @@
    
     <div class="container">
         <h1>Portfolio - Alvi Ramadhan</h1>
-        <p>Welcome to my digital showcase of projects, responsibilities, challenges, and growth.</p>
+        <p>Welcome to my digital showcase of projects</p>
 </div>
 
 <nav class="navbar">
@@ -286,5 +314,26 @@
     <div class="footer">
         <p>&copy; 2025 Alvi Ramadhan | Portfolio</p>
     </div>
+
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="Expanded view">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+    
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+    
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
