@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
+
         .navbar {
             width: 100%;
             padding: 20px 0;
@@ -21,6 +23,7 @@
             background: #121212;
             z-index: 1000;
         }
+
         .navbar ul {
             list-style: none;
             margin: 0;
@@ -29,9 +32,11 @@
             justify-content: center;
             gap: 50px;
         }
+
         .navbar ul li {
             display: inline-block;
         }
+
         .navbar ul li a {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.2rem;
@@ -41,6 +46,7 @@
             position: relative;
             padding-bottom: 5px;
         }
+
         .navbar ul li a::after {
             content: '';
             position: absolute;
@@ -51,14 +57,18 @@
             background-color: #ff00ff;
             transition: width 0.3s ease-in-out;
         }
+
         .navbar ul li a:hover::after {
             width: 100%;
         }
+
         .container {
             text-align: center;
             padding: 50px 20px;
-            padding-top: 80px; /* Offset for fixed navbar */
+            padding-top: 80px;
+            /* Offset for fixed navbar */
         }
+
         .project {
             max-width: 900px;
             margin: 30px auto;
@@ -69,10 +79,12 @@
             box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.5);
             transition: transform 0.4s ease-in-out, box-shadow 0.6s ease-in-out;
         }
+
         .project:hover {
             transform: scale(1.01);
             box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.8);
         }
+
         h1 {
             font-size: 3rem;
             text-transform: uppercase;
@@ -82,6 +94,7 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
         }
+
         h2 {
             font-size: 2rem;
             font-family: 'Orbitron', sans-serif;
@@ -89,6 +102,7 @@
             border-bottom: 2px solid rgba(255, 0, 255, 0.6);
             padding-bottom: 5px;
         }
+
         h3 {
             font-size: 1.3rem;
             font-family: 'Orbitron', sans-serif;
@@ -98,6 +112,7 @@
             padding-bottom: 5px;
             margin-top: 20px;
         }
+
         .button {
             padding: 10px 20px;
             font-size: 1rem;
@@ -110,16 +125,21 @@
             text-transform: uppercase;
             transition: filter 0.3s ease-in-out;
         }
+
         .button:hover {
             filter: brightness(1.5);
         }
-        a, p, ul {
+
+        a,
+        p,
+        ul {
             font-size: 1.1rem;
             line-height: 1.6;
             letter-spacing: 0.5px;
             color: #e0e0e0;
-            text-decoration:none;
+            text-decoration: none;
         }
+
         .gallery {
             display: flex;
             overflow-x: auto;
@@ -128,6 +148,7 @@
             gap: 10px;
             padding: 10px;
         }
+
         .gallery img {
             width: auto;
             height: 250px;
@@ -137,16 +158,19 @@
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
         }
+
         .gallery img:hover {
             transform: scale(1.05);
             z-index: 10;
         }
+
         .gallery-wrapper {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         .arrow {
             background: none;
             border: none;
@@ -157,9 +181,11 @@
             padding: 10px;
             transition: transform 0.2s ease-in-out;
         }
+
         .arrow:hover {
             transform: scale(1.2);
         }
+
         .lightbox {
             position: fixed;
             top: 0;
@@ -173,14 +199,17 @@
             z-index: 1000;
             display: none;
         }
+
         .lightbox img {
             max-width: 90vw;
             max-height: 90vh;
             border-radius: 10px;
         }
+
         .lightbox.active {
             display: flex;
         }
+
         .footer {
             text-align: center;
             padding: 20px;
@@ -192,26 +221,99 @@
         }
     </style>
 </head>
+
 <body>
-   
+
     <div class="container">
         <h1>Portfolio - Alvi Ramadhan</h1>
         <p>Welcome to my digital showcase of projects</p>
-</div>
+    </div>
 
-<nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contacts.html">Contact</a></li>
-    </ul>
-</nav>
-    
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="project">
+        <h2>📌 PlantPal - UI/UX Design (iOS Prototype)</h2>
+        <h3>Tools & Methods:</h3>
+        <p>Figma, Maze Testing, Card Sorting, Heuristic Evaluation, Surveys</p>
+        <h3>Overview:</h3>
+        <p>PlantPal is an iOS prototype focusing on user-centered design to simplify plant care for users aged 18–34. It
+            provides AI-driven suggestions, customized watering reminders, onboarding tutorials, and a community forum.
+            This app was designed through iterative testing and feedback loops involving real users.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li>AI-driven plant suggestions and reminders.</li>
+            <li>Tutorial screens and Help buttons for new users.</li>
+            <li>Community forum with styled interaction options.</li>
+            <li>Navigation with active states and improved icon clarity.</li>
+            <li>Content switchers refactored for local section updates only.</li>
+        </ul>
+        <h3>Responsibilities:</h3>
+        <ul>
+            <li>Developed low-, medium-, and high-fidelity prototypes in Figma.</li>
+            <li>Conducted surveys, card sorting, and usability testing.</li>
+            <li>Applied heuristic evaluation findings to improve navigation and clarity.</li>
+            <li>Refined user flow and visual layout across all app sections.</li>
+        </ul>
+        <h3>Challenges:</h3>
+        <ul>
+            <li>Lack of onboarding support and confusing navigation in early iterations.</li>
+            <li>Unclear icon functions causing frequent misclicks.</li>
+            <li>Clunky content switching that reset full pages.</li>
+            <li>Need for engaging but clean community feature interface.</li>
+        </ul>
+        <h3>Solutions:</h3>
+        <ul>
+            <li>Implemented tutorial screens and labeled icons.</li>
+            <li>Introduced consistent layout and active nav states.</li>
+            <li>Refactored content switchers to only update visible components.</li>
+            <li>Designed interactive and scalable forum UI layout.</li>
+        </ul>
+        <div class="gallery-wrapper">
+            <button class="arrow left">&#10094;</button>
+            <div class="gallery">
+                <img src="media/ui1.png" alt="PlantPal UI/UX 1">
+                <img src="media/ui2.png" alt="PlantPal UI/UX 2">
+                <img src="media/ui3.png" alt="PlantPal UI/UX 3">
+                <img src="media/ui4.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui5.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui6.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui7.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui8.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui9.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui10.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui11.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui12.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui13.png" alt="PlantPal UI/UX 4">
+                <img src="media/ui14.png" alt="PlantPal UI/UX 4">
+            </div>
+            <button class="arrow right">&#10095;</button>
+        </div>
+        <button class="button"><a
+                href="https://www.figma.com/design/wNgtRuhYKZpfb3MFrVTGzE/Lo-Fi-prototype?node-id=0-1&p=f&t=SM5NvWDGVK6YP0Pc-0"
+                target="_blank" rel="noopener noreferrer">Low-Fi Wireframes</a></button>
+        <button class="button"><a href="https://www.figma.com/design/5nerEwR4UFc5fWrY7SpuML/Hi-Fi-prototype?node-id=0-1"
+                target="_blank" rel="noopener noreferrer">High-Fi Prototype</a></button>
+        <button class="button"><a href="https://app.maze.co/report/Plantpal-User-Test-Low-Fi/2t3tlyh134ad/intro"
+                target="_blank" rel="noopener noreferrer">Maze Test (Low-Fi)</a></button>
+        <button class="button"><a href="https://app.maze.co/report/Medium-Fidelity-Plantpal/19jbhd7lz41m9yd/intro"
+                target="_blank" rel="noopener noreferrer">Maze Test (Mid-Fi)</a></button>
+        <button class="button"><a href="https://docs.google.com/document/d/1XEdv7DypQf5MwLQxgqycFJe6V-UwqPKM6JVBT5wHqy4"
+                target="_blank" rel="noopener noreferrer">Heuristic Eval</a></button>
+    </div>
+
     <div class="project">
         <h2>📌 PlantPal Lite - Android App (Personal Project)</h2>
         <h3>Tech Stack:</h3>
         <p>Java, Android Studio, Room Database, Jetpack Navigation, RecyclerView, ViewModel, LiveData</p>
         <h3>Overview:</h3>
-        <p>PlantPal Lite is an Android-based plant care app designed to help users track watering and fertilizing schedules. It provides a user-friendly interface for plant management while ensuring data persistence through a Room database.</p>
+        <p>PlantPal Lite is an Android-based plant care app designed to help users track watering and fertilizing
+            schedules. It provides a user-friendly interface for plant management while ensuring data persistence
+            through a Room database.</p>
         <h3>Key Features:</h3>
         <ul>
             <li>Add, Edit, and Track Plants – Users can add plants, set watering schedules, and receive reminders.</li>
@@ -241,24 +343,27 @@
         </ul>
         <div class="gallery-wrapper">
             <button class="arrow left">&#10094;</button>
-        <div class="gallery">
-            <img src="media/plantpal1.png" alt="PlantPal Screenshot 1">
-            <img src="media/plantpal2.png" alt="PlantPal Screenshot 2">
-            <img src="media/plantpal3.png" alt="PlantPal Screenshot 3">
-            <img src="media/plantpal4.png" alt="PlantPal Screenshot 3">
+            <div class="gallery">
+                <img src="media/plantpal1.png" alt="PlantPal Screenshot 1">
+                <img src="media/plantpal2.png" alt="PlantPal Screenshot 2">
+                <img src="media/plantpal3.png" alt="PlantPal Screenshot 3">
+                <img src="media/plantpal4.png" alt="PlantPal Screenshot 3">
+            </div>
+            <button class="arrow right">&#10095;</button>
         </div>
-        <button class="arrow right">&#10095;</button>
-        </div>
-        <button class="button"><a href="https://youtu.be/zDDxJgTWgzo" target="_blank" rel="noopener noreferrer">See Demo</a></button>
-        <button class="button"><a href="https://github.com/alviramadhan/PlantpalLite" target="_blank" rel="noopener noreferrer">View on GitHub</a></button>
+        <button class="button"><a href="https://youtu.be/zDDxJgTWgzo" target="_blank" rel="noopener noreferrer">See
+                Demo</a></button>
+        <button class="button"><a href="https://github.com/alviramadhan/PlantpalLite" target="_blank"
+                rel="noopener noreferrer">View on GitHub</a></button>
     </div>
-    
+
     <div class="project">
         <h2>📌 Library Management System - Desktop App (Personal Project)</h2>
         <h3>Tech Stack:</h3>
         <p>C#, .NET Framework, MVC Architecture, Dataset</p>
         <h3>Overview:</h3>
-        <p>A Windows-based library management system that streamlines book reservations, borrowing, and returns. It is built with an MVC architecture to separate concerns and enhance maintainability.</p>
+        <p>A Windows-based library management system that streamlines book reservations, borrowing, and returns. It is
+            built with an MVC architecture to separate concerns and enhance maintainability.</p>
         <h3>Key Features:</h3>
         <ul>
             <li>Book Reservation & Borrowing System – Users can borrow and return books efficiently.</li>
@@ -267,7 +372,7 @@
             <li>DTO Implementation – Prevents direct model access from the view layer.</li>
             <li>Admin & User Access Levels – Provides role-based access to different functionalities.</li>
         </ul>
-          <h3>Responsibilities:</h3>
+        <h3>Responsibilities:</h3>
         <ul>
             <li>Implemented MVC framework for better code organization.</li>
             <li>Developed book reservation, borrowing, and return system.</li>
@@ -287,24 +392,28 @@
         </ul>
         <div class="gallery-wrapper">
             <button class="arrow left">&#10094;</button>
-        <div class="gallery">
-            <img src="media/lib1.png" alt="PlantPal Screenshot 1">
-            <img src="media/lib2.png" alt="PlantPal Screenshot 2">
-            <img src="media/lib3.png" alt="PlantPal Screenshot 3">
-            <img src="media/lib4.png" alt="PlantPal Screenshot 3">
+            <div class="gallery">
+                <img src="media/lib1.png" alt="PlantPal Screenshot 1">
+                <img src="media/lib2.png" alt="PlantPal Screenshot 2">
+                <img src="media/lib3.png" alt="PlantPal Screenshot 3">
+                <img src="media/lib4.png" alt="PlantPal Screenshot 3">
+            </div>
+            <button class="arrow right">&#10095;</button>
         </div>
-        <button class="arrow right">&#10095;</button>
-        </div>
-        <button class="button"><a href="https://youtu.be/MVrX14unP0Q" target="_blank" rel="noopener noreferrer">See Demo</a></button>
-        <button class="button"><a href="https://drive.google.com/drive/u/4/folders/1TmR8gL55y4nZ9A7LCLZ_5RuqlqAcBvsf" target="_blank" rel="noopener noreferrer"></a></a>View on Drive</button>
+        <button class="button"><a href="https://youtu.be/MVrX14unP0Q" target="_blank" rel="noopener noreferrer">See
+                Demo</a></button>
+        <button class="button"><a href="https://drive.google.com/drive/u/4/folders/1TmR8gL55y4nZ9A7LCLZ_5RuqlqAcBvsf"
+                target="_blank" rel="noopener noreferrer"></a>View on Drive</button>
     </div>
-    
+
     <div class="project">
         <h2>📌 WeekndWIK - Web App (HTML, CSS, Bootstrap) | Scrum Master</h2>
         <h3>Tech Stack:</h3>
         <p>HTML, CSS, Bootstrap</p>
         <h3>Overview:</h3>
-        <p>WeekndWIK is a fan-based web application that allows users to explore and review The Weeknd’s music discography. The platform features a responsive UI with interactive elements for enhanced user engagement.</p>
+        <p>WeekndWIK is a fan-based web application that allows users to explore and review The Weeknd’s music
+            discography. The platform features a responsive UI with interactive elements for enhanced user engagement.
+        </p>
         <h3>Key Features:</h3>
         <ul>
             <li>Album Collection & Detail Pages – Users can browse The Weeknd’s music collection.</li>
@@ -317,6 +426,9 @@
             <li>Led sprint planning and managed Agile workflows.</li>
             <li>Developed filtering and search functionalities for albums and songs.</li>
             <li>Designed navigation bar and account settings page.</li>
+            <li>Developed User Review, Display Albums&Songs, and Random Track functionalities</li>
+            <li>Managed login and register backend using php</li>
+            <li>Setup Database and Hosting</li>
         </ul>
         <h3>Challenges:</h3>
         <ul>
@@ -332,31 +444,34 @@
         </ul>
         <div class="gallery-wrapper">
             <button class="arrow left">&#10094;</button>
-        <div class="gallery">
-            <img src="media/wik1.png" alt="PlantPal Screenshot 1">
-            <img src="media/wik2.png" alt="PlantPal Screenshot 2">
-            <img src="media/wik3.png" alt="PlantPal Screenshot 3">
-            <img src="media/wik4.png" alt="PlantPal Screenshot 3">
-            <img src="media/wik5.png" alt="PlantPal Screenshot 3">
+            <div class="gallery">
+                <img src="media/wik1.png" alt="PlantPal Screenshot 1">
+                <img src="media/wik2.png" alt="PlantPal Screenshot 2">
+                <img src="media/wik3.png" alt="PlantPal Screenshot 3">
+                <img src="media/wik4.png" alt="PlantPal Screenshot 3">
+                <img src="media/wik5.png" alt="PlantPal Screenshot 3">
+            </div>
+            <button class="arrow right">&#10095;</button>
         </div>
-        <button class="arrow right">&#10095;</button>
-        </div>
-        <button class="button"><a href="https://youtu.be/CXLyFuV5-Ss" target="_blank" rel="noopener noreferrer">Demo</a></button>
-        <button class="button"><a href="https://github.com/alviramadhan/WeekndWIK" target="_blank" rel="noopener noreferrer">View on GitHub</a></button>
-        <button class="button"><a href="http://weekndwik.free.nf" target="_blank" rel="noopener noreferrer">Visit Website</a></button>
+        <button class="button"><a href="https://youtu.be/CXLyFuV5-Ss" target="_blank"
+                rel="noopener noreferrer">Demo</a></button>
+        <button class="button"><a href="https://github.com/alviramadhan/WeekndWIK" target="_blank"
+                rel="noopener noreferrer">View on GitHub</a></button>
+        <button class="button"><a href="http://weekndwik.free.nf" target="_blank" rel="noopener noreferrer">Visit
+                Website</a></button>
     </div>
     <div class="footer">
         <p>&copy; 2025 Alvi Ramadhan | Portfolio</p>
     </div>
 
     <div class="lightbox" id="lightbox">
-      <img src="" alt="Expanded view">
+        <img src="" alt="Expanded view">
     </div>
 
     <script>
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = lightbox.querySelector('img');
-    
+
         document.querySelectorAll('.gallery img').forEach(img => {
             img.addEventListener('click', () => {
                 lightbox.classList.add('active');
@@ -364,20 +479,21 @@
                 lightboxImg.alt = img.alt;
             });
         });
-    
+
         lightbox.addEventListener('click', () => {
             lightbox.classList.remove('active');
         });
 
         document.querySelectorAll('.gallery-wrapper').forEach(wrapper => {
-    const gallery = wrapper.querySelector('.gallery');
-    wrapper.querySelector('.arrow.left').addEventListener('click', () => {
-        gallery.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-    wrapper.querySelector('.arrow.right').addEventListener('click', () => {
-        gallery.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-});    
+            const gallery = wrapper.querySelector('.gallery');
+            wrapper.querySelector('.arrow.left').addEventListener('click', () => {
+                gallery.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+            wrapper.querySelector('.arrow.right').addEventListener('click', () => {
+                gallery.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+        });    
     </script>
 </body>
+
 </html>
