@@ -3,119 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvi Ramadhan - IT Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title> Portfolio - Alvi Ramadhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #f0f0f0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        .navbar {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background: #121212;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .navbar ul li {
+            display: inline-block;
+        }
+        .navbar ul li a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: #00ffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ff00ff;
+            transition: width 0.3s ease-in-out;
+        }
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+            padding-top: 80px; /* Offset for fixed navbar */
+        }
+        .project {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.5);
+            transition: transform 0.4s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+        .project:hover {
+            transform: scale(1.01);
+            box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.8);
+        }
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+        }
+        h2 {
+            font-size: 2rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #00ffff;
+            border-bottom: 2px solid rgba(255, 0, 255, 0.6);
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #ff00ff;
+            text-transform: uppercase;
+            border-bottom: 2px solid rgba(255, 0, 255, 0.8);
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 10px;
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: filter 0.3s ease-in-out;
+        }
+        .button:hover {
+            filter: brightness(1.5);
+        }
+        p, ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            color: #e0e0e0;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Alvi Ramadhan</h1>
-            <p>Software Developer | Mobile & Web Enthusiast</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+   
+    <div class="container">
+        <h1>Portfolio - Alvi Ramadhan</h1>
+        <p>Welcome to my digital showcase of projects, responsibilities, challenges, and growth.</p>
+</div>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
     
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm an IT student with a passion for building efficient and user-friendly applications. My focus is on mobile and web development, ensuring performance, accessibility, and seamless user experiences.</p>
+    <div class="project">
+        <h2>📌 PlantPal Lite - Android App</h2>
+        <h3>Tech Stack:</h3>
+        <p>Java, Android Studio, Room Database, Jetpack Navigation, RecyclerView, ViewModel, LiveData</p>
+        <h3>Overview:</h3>
+        <p>PlantPal Lite is an Android-based plant care app designed to help users track watering and fertilizing schedules. It provides a user-friendly interface for plant management while ensuring data persistence through a Room database.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Add, Edit, and Track Plants – Users can add plants, set watering schedules, and receive reminders.</li>
+            <li>Room Database Integration – Ensures persistent data storage.</li>
+            <li>RecyclerView & LiveData – Enables real-time UI updates for plant schedules.</li>
+            <li>Jetpack Navigation – Smooth screen transitions with SafeArgs for passing data.</li>
+            <li>Material Design UI – Clean and modern Android user experience.</li>
+        </ul>
+        <h3>Responsibilities:</h3>
+        <ul>
+            <li>Developed user authentication, plant management, and scheduling features.</li>
+            <li>Conducted user testing and heuristic evaluation to refine UI/UX.</li>
+        </ul>
+        <h3>Challenges:</h3>
+        <ul>
+            <li>UI inconsistencies and confusing navigation.</li>
+            <li>Content switcher malfunctions.</li>
+            <li>Data persistence issues causing plant records to disappear.</li>
+            <li>Limited onboarding tutorials making it hard for new users.</li>
+        </ul>
+        <h3>Solutions:</h3>
+        <ul>
+            <li>Standardized UI components based on user feedback.</li>
+            <li>Fixed content switcher logic for smooth transitions.</li>
+            <li>Refactored database handling to ensure plant data remains persistent.</li>
+            <li>Added tutorial screens for better onboarding.</li>
+        </ul>
+        <div class="gallery">
+            <img src="plantpal1.jpg" alt="PlantPal Screenshot 1">
+            <img src="plantpal2.jpg" alt="PlantPal Screenshot 2">
+            <img src="plantpal3.jpg" alt="PlantPal Screenshot 3">
         </div>
-    </section>
+        <button class="button">See Demo</button>
+        <button class="button">View on GitHub</button>
+    </div>
     
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            
-            <!-- PlantPal Lite Project -->
-            <div class="project">
-                <h3>PlantPal Lite - Android App</h3>
-                <p>An intuitive plant care assistant that helps users manage their plants and watering schedules efficiently.</p>
-                <div class="gallery">
-                    <!-- Swappable Image Gallery for PlantPal Lite -->
-                    <img src="images/plantpal1.png" alt="Screenshot 1">
-                    <img src="images/plantpal2.png" alt="Screenshot 2">
-                    <img src="images/plantpal3.png" alt="Screenshot 3">
-                </div>
-                <p><strong>Challenges & Solutions:</strong> Implemented SafeArgs for smooth data passing and optimized RecyclerView for large datasets.</p>
-                <a href="https://github.com/alviramadhan/PlantpalLite" target="_blank">View on GitHub</a>
-            </div>
-            
-            <!-- Library Management System Project -->
-            <div class="project">
-                <h3>Library Management System</h3>
-                <p>A Windows desktop application for managing book lending, reservations, and returns.</p>
-                <div class="gallery">
-                    <!-- Swappable Image Gallery for Library System -->
-                    <img src="images/library1.png" alt="Screenshot 1">
-                    <img src="images/library2.png" alt="Screenshot 2">
-                    <img src="images/library3.png" alt="Screenshot 3">
-                </div>
-                <p><strong>Challenges & Solutions:</strong> Used DTO patterns to prevent direct model access and implemented dataset caching for optimized performance.</p>
-                <a href="#">Demo Video</a>
-            </div>
-            
-            <!-- WeekndWIK Project -->
-            <div class="project">
-                <h3>WeekndWIK - Music Collection & Review</h3>
-                <p>A web app that allows users to explore and review The Weeknd’s music collection.</p>
-                <div class="gallery">
-                    <!-- Swappable Image Gallery for WeekndWIK -->
-                    <img src="images/weekndwik1.png" alt="Screenshot 1">
-                    <img src="images/weekndwik2.png" alt="Screenshot 2">
-                    <img src="images/weekndwik3.png" alt="Screenshot 3">
-                </div>
-                <p><strong>Challenges & Solutions:</strong> Optimized Bootstrap grid for better responsiveness and integrated search filtering for an enhanced UX.</p>
-                <a href="https://github.com/alviramadhan/WeekndWIK" target="_blank">View on GitHub</a>
-            </div>
-            
-            <!-- IndoGo2Joy Project -->
-            <div class="project">
-                <h3>IndoGo2Joy - Travel Recommendation Web App</h3>
-                <p>A responsive travel recommendation website providing curated travel guides.</p>
-                <div class="gallery">
-                    <!-- Swappable Image Gallery for IndoGo2Joy -->
-                    <img src="images/indogo1.png" alt="Screenshot 1">
-                    <img src="images/indogo2.png" alt="Screenshot 2">
-                    <img src="images/indogo3.png" alt="Screenshot 3">
-                </div>
-                <p><strong>Challenges & Solutions:</strong> Ensured mobile responsiveness using media queries and improved loading performance with lazy image loading.</p>
-                <a href="#">Demo Video</a>
-            </div>
+    <div class="project">
+        <h2>📌 Library Management System - Desktop App (.NET, C#)</h2>
+        <h3>Tech Stack:</h3>
+        <p>C#, .NET Framework, MVC Architecture, Dataset</p>
+        <h3>Overview:</h3>
+        <p>A Windows-based library management system that streamlines book reservations, borrowing, and returns. It is built with an MVC architecture to separate concerns and enhance maintainability.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Book Reservation & Borrowing System – Users can borrow and return books efficiently.</li>
+            <li>MVC Architecture – Ensures modularity and easy maintenance.</li>
+            <li>Dataset & Auto-Generated Functions – Simplifies database interactions.</li>
+            <li>DTO Implementation – Prevents direct model access from the view layer.</li>
+            <li>Admin & User Access Levels – Provides role-based access to different functionalities.</li>
+        </ul>
+          <h3>Responsibilities:</h3>
+        <ul>
+            <li>Implemented MVC framework for better code organization.</li>
+            <li>Developed book reservation, borrowing, and return system.</li>
+            <li>Optimized dataset queries for better performance.</li>
+        </ul>
+        <h3>Challenges:</h3>
+        <ul>
+            <li>Database queries were slow, affecting system efficiency.</li>
+            <li>Direct UI access to the database posed security risks.</li>
+            <li>Ensuring a modular and maintainable architecture.</li>
+        </ul>
+        <h3>Solutions:</h3>
+        <ul>
+            <li>Optimized dataset interactions and implemented caching.</li>
+            <li>Used DTOs to prevent direct database access from UI components.</li>
+            <li>Implemented a structured MVC framework for long-term maintainability.</li>
+        </ul>
+        <div class="gallery">
+            <img src="plantpal1.jpg" alt="PlantPal Screenshot 1">
+            <img src="plantpal2.jpg" alt="PlantPal Screenshot 2">
+            <img src="plantpal3.jpg" alt="PlantPal Screenshot 3">
         </div>
-    </section>
+        <button class="button">See Demo</button>
+        <button class="button">View on GitHub</button>
+    </div>
     
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio Requirements</h2>
-            <ul>
-                <li>detailsss wireframes, mockups, and prototypes outlining the UI/UX process</li>
-                <li>Product demos or video walkthroughs of completed apps</li>
-                <li>Coding samples or links to projects showcasing development skills</li>
-                <li>Visuals of app design focused on user experience and functionality</li>
-            </ul>
+    <div class="project">
+        <h2>📌 WeekndWIK - Web App (HTML, CSS, Bootstrap) | Scrum Master</h2>
+        <h3>Tech Stack:</h3>
+        <p>HTML, CSS, Bootstrap</p>
+        <h3>Overview:</h3>
+        <p>WeekndWIK is a fan-based web application that allows users to explore and review The Weeknd’s music discography. The platform features a responsive UI with interactive elements for enhanced user engagement.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Album Collection & Detail Pages – Users can browse The Weeknd’s music collection.</li>
+            <li>Responsive Design (Bootstrap) – Fully optimized for mobile and desktop viewing.</li>
+            <li>Dynamic Filtering & Navigation – Allows users to search and filter albums efficiently.</li>
+            <li>Interactive UI Components – Includes hover effects and dynamic elements.</li>
+        </ul>
+        <h3>Responsibilities:</h3>
+        <ul>
+            <li>Led sprint planning and managed Agile workflows.</li>
+            <li>Developed filtering and search functionalities for albums and songs.</li>
+            <li>Designed navigation bar and account settings page.</li>
+        </ul>
+        <h3>Challenges:</h3>
+        <ul>
+            <li>Team delays due to inefficient scheduling.</li>
+            <li>Initial lack of real-time search functionality.</li>
+            <li>Inconsistent styling across different pages.</li>
+        </ul>
+        <h3>Solutions:</h3>
+        <ul>
+            <li>Revised team scheduling through structured Agile sprint planning.</li>
+            <li>Implemented real-time JavaScript filtering for better search experience.</li>
+            <li>Refined CSS and dark-mode styling for a seamless experience.</li>
+        </ul>
+        <div class="gallery">
+            <img src="plantpal1.jpg" alt="PlantPal Screenshot 1">
+            <img src="plantpal2.jpg" alt="PlantPal Screenshot 2">
+            <img src="plantpal3.jpg" alt="PlantPal Screenshot 3">
         </div>
-    </section>
-    
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Alvi Rmd. All rights reserved.</p>
-        </div>
-    </footer>     
+        <button class="button">See Demo</button>
+        <button class="button">View on GitHub</button>
+    </div>
 </body>
 </html>
