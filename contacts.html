@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Alvi Ramadhan</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
+      <style>
         body {
             margin: 0;
             padding: 0;
@@ -14,26 +14,28 @@
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
-        .container {
-            text-align: center;
-            padding: 50px 20px;
-        }
+
         .navbar {
-            text-align: center;
+            width: 100%;
             padding: 20px 0;
+            text-align: center;
             background: #121212;
+            z-index: 1000;
         }
+
         .navbar ul {
             list-style: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             gap: 50px;
         }
+
         .navbar ul li {
             display: inline-block;
         }
+
         .navbar ul li a {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.2rem;
@@ -43,6 +45,7 @@
             position: relative;
             padding-bottom: 5px;
         }
+
         .navbar ul li a::after {
             content: '';
             position: absolute;
@@ -53,23 +56,34 @@
             background-color: #ff00ff;
             transition: width 0.3s ease-in-out;
         }
+
         .navbar ul li a:hover::after {
             width: 100%;
         }
-        .contact-section {
-            max-width: 800px;
-            margin: 50px auto;
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+            padding-top: 80px;
+            /* Offset for fixed navbar */
+        }
+
+        .project {
+            max-width: 900px;
+            margin: 30px auto;
             padding: 20px;
             text-align: left;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.3);
-            transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.5);
+            transition: transform 0.4s ease-in-out, box-shadow 0.6s ease-in-out;
         }
-        .contact-section:hover {
-            transform: scale(1.02);
-            box-shadow: 0px 0px 25px rgba(255, 0, 255, 0.5);
+
+        .project:hover {
+            transform: scale(1.01);
+            box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.8);
         }
+
         h1 {
             font-size: 3rem;
             text-transform: uppercase;
@@ -79,12 +93,122 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
         }
+
         h2 {
             font-size: 2rem;
+            font-family: 'Orbitron', sans-serif;
             color: #00ffff;
             border-bottom: 2px solid rgba(255, 0, 255, 0.6);
             padding-bottom: 5px;
         }
+
+        h3 {
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #ff00ff;
+            text-transform: uppercase;
+            border-bottom: 2px solid rgba(255, 0, 255, 0.8);
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 10px;
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            filter: brightness(1.5);
+        }
+
+        a,
+        p,
+        ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            color: #e0e0e0;
+            text-decoration: none;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: auto;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow {
+            background: none;
+            border: none;
+            color: #ff00ff;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1;
+            padding: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .arrow:hover {
+            transform: scale(1.2);
+        }
+
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
         .footer {
             text-align: center;
             padding: 20px;
@@ -109,13 +233,16 @@
         </ul>
     </nav>
     
+    <div class="project">
     <div class="contact-section">
         <h2>Email</h2>
         <p>📧 13720@ait.nsw.edu.au</p>
         <h2>Social Media</h2>
-        <p>🔗 <a href="www.linkedin.com/in/alviramadhan">LinkedIn</a> | <a href="https://github.com/alviramadhan">GitHub</a> </p>
+        <p>🔗 <a href="https://www.linkedin.com/in/alviramadhan" target="_blank" rel="noopener noreferrer">LinkedIn       
+        </a>  |
+        🔗 <a href="https://github.com/alviramadhan"  target="_blank" rel="noopener noreferrer">GitHub</a> </p>
     </div>
-    
+    </div>
     <div class="footer">
         <p>&copy; 2025 Alvi Ramadhan | Portfolio</p>
     </div>
