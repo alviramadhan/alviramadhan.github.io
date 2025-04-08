@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio - Alvi Ramadhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/icon.PNG" type="image/icon type">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="neon-cursor" id="neonCursor"></div>
+    <div class="container">
+        <h1>Portfolio - Alvi Ramadhan</h1>
+        <p>Welcome to my digital showcase of projects</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="project">
+        <h2>📌 Library Management System - Desktop App (Personal Project)</h2>
+        <h3>Tech Stack:</h3>
+        <p>C#, .NET Framework, MVC Architecture, Dataset</p>
+        <h3>Overview:</h3>
+        <p>A Windows-based library management system that streamlines book reservations, borrowing, and returns. It is
+            built with an MVC architecture to separate concerns and enhance maintainability.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Book Reservation & Borrowing System – Users can borrow and return books efficiently.</li>
+            <li>MVC Architecture – Ensures modularity and easy maintenance.</li>
+            <li>Dataset & Auto-Generated Functions – Simplifies database interactions.</li>
+            <li>DTO Implementation – Prevents direct model access from the view layer.</li>
+            <li>Admin & User Access Levels – Provides role-based access to different functionalities.</li>
+        </ul>
+        <h3>Responsibilities:</h3>
+        <ul>
+            <li>Implemented MVC framework for better code organization.</li>
+            <li>Developed book reservation, borrowing, and return system.</li>
+            <li>Optimized dataset queries for better performance.</li>
+        </ul>
+        <h3>Challenges:</h3>
+        <ul>
+            <li>Database queries were slow, affecting system efficiency.</li>
+            <li>Direct UI access to the database posed security risks.</li>
+            <li>Ensuring a modular and maintainable architecture.</li>
+        </ul>
+        <h3>Solutions:</h3>
+        <ul>
+            <li>Optimized dataset interactions and implemented caching.</li>
+            <li>Used DTOs to prevent direct database access from UI components.</li>
+            <li>Implemented a structured MVC framework for long-term maintainability.</li>
+        </ul>
+        <div class="gallery-wrapper">
+            <button class="arrow left">&#10094;</button>
+            <div class="gallery">
+                <img src="media/lib1.png" alt="PlantPal Screenshot 1">
+                <img src="media/lib2.png" alt="PlantPal Screenshot 2">
+                <img src="media/lib3.png" alt="PlantPal Screenshot 3">
+                <img src="media/lib4.png" alt="PlantPal Screenshot 3">
+            </div>
+            <button class="arrow right">&#10095;</button>
+        </div>
+        <button class="button"><a href="https://youtu.be/MVrX14unP0Q" target="_blank" rel="noopener noreferrer">See
+                Demo</a></button>
+        <button class="button"><a href="https://drive.google.com/drive/u/4/folders/1TmR8gL55y4nZ9A7LCLZ_5RuqlqAcBvsf"
+                target="_blank" rel="noopener noreferrer"></a>View on Drive</button>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Alvi Ramadhan | Portfolio</p>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Expanded view">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        document.querySelectorAll('.gallery-wrapper').forEach(wrapper => {
+            const gallery = wrapper.querySelector('.gallery');
+            wrapper.querySelector('.arrow.left').addEventListener('click', () => {
+                gallery.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+            wrapper.querySelector('.arrow.right').addEventListener('click', () => {
+                gallery.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+        });    
+    </script>
+</body>
+
+</html>
