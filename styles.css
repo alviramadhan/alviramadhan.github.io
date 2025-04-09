@@ -19,6 +19,7 @@ body {
     position: sticky;
     top: 0;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -27,7 +28,9 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .navbar ul li {
@@ -388,43 +391,43 @@ transition: color 0.3s ease;
 }
 
 .navbar-title {
-position: absolute;
-left: 30px;
-top: 50%;
-transform: translateY(-50%);
-display: flex;
-align-items: center;
-gap: 10px;
-font-family: 'Orbitron', sans-serif;
-font-weight: 700;
-font-size: 1.1rem;
-color: #6e40c9;
-opacity: 0;
-transition: opacity 0.4s ease, transform 0.4s ease;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #6e40c9;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .navbar-title img {
-width: 30px;
-height: 30px;
-border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 .navbar.sticky .navbar-title {
-opacity: 1;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
+        flex-direction: row;
     }
 
     .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 10px 0 0 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
     }
 
     .navbar ul li {
