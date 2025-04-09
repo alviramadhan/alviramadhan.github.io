@@ -11,18 +11,27 @@
 </head>
 
 <body>
-    <div class="neon-cursor" id="neonCursor"></div>
-    <div class="container">
-        <h1>Portfolio - Alvi Ramadhan</h1>
-        <p>Welcome to my digital showcase of projects</p>
-    </div>
-
     <nav class="navbar">
+        <div class="navbar-title">
+            <img src="media/icon.PNG" alt="Alvi Icon" />
+            <span>Alvi Ramadhan</span>
+          </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contacts.html">Contact</a></li>
+            
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contacts.html">CONTACT</a></li>
         </ul>
     </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Alvi Ramadhan</h1>
+            <p class="hero-subtitle">UI/UX Designer & Full Stack Developer</p>
+            <p class="hero-tagline">Welcome to my digital showcase of projects</p>
+            <div class="hero-decor"></div>
+        </div>
+    </header>
+    
 
     <div class="project">
         <h2>📌 PlantPal LITE - Android App (Personal Project)</h2>
@@ -104,6 +113,17 @@
                 gallery.scrollBy({ left: 300, behavior: 'smooth' });
             });
         });    
+             
+  const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
+});
+
     </script>
 </body>
 

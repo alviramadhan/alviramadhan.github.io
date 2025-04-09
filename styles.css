@@ -1,9 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background: #121212;
-    color: #f0f0f0;
-    font-family: 'Poppins', sans-serif;
+    background: #F1F2F4;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    color: #2a2a2a;
     overflow-x: hidden;
 }
 
@@ -11,8 +14,11 @@ body {
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    background: #121212;
+    background: #ffffff;
     z-index: 1000;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
 }
 
 .navbar ul {
@@ -31,9 +37,11 @@ body {
 .navbar ul li a {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
-    color: #00ffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #a47811;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     position: relative;
     padding-bottom: 5px;
 }
@@ -45,7 +53,7 @@ body {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #ff00ff;
+    background-color: #6e40c9;
     transition: width 0.3s ease-in-out;
 }
 
@@ -53,11 +61,41 @@ body {
     width: 100%;
 }
 
+.hero {
+    padding: 80px 20px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #e0e0f8 0%, #ffffff 100%);
+         border-bottom: 1px solid #e3e3e3;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -1px;
+    margin-bottom: 0.3em;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.3em;
+}
+
+.hero-tagline {
+    font-size: 1rem;
+    color: #999;
+}
+
 .container {
     text-align: center;
-    padding: 50px 20px;
-    padding-top: 80px;
-    /* Offset for fixed navbar */
+    padding: 100px 20px 50px;
 }
 
 .project {
@@ -65,41 +103,43 @@ body {
     margin: 30px auto;
     padding: 20px;
     text-align: left;
-    background: rgba(255, 255, 255, 0.1);
+    background: #fcfcff;
+      font-family: 'Manrope', sans-serif;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.5);
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
     transition: transform 0.4s ease-in-out, box-shadow 0.6s ease-in-out;
 }
 
 .project:hover {
     transform: scale(1.01);
-    box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.8);
+    box-shadow: 0 0 25px rgba(64, 201, 255, 0.5); /* soft neon blue */
 }
 
 h1 {
+    font-family: 'Sora', sans-serif;
     font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
     text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(90deg, #ff00ff, #00ffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+    color: #111;
 }
 
 h2 {
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
-    font-family: 'Orbitron', sans-serif;
-    color: #00ffff;
-    border-bottom: 2px solid rgba(255, 0, 255, 0.6);
+    font-weight: 700;
+    color: #333333;
+    border-bottom: 2px solid rgba(64, 201, 255, 0.2);
     padding-bottom: 5px;
 }
 
 h3 {
+    font-family: 'Inter', sans-serif;
     font-size: 1.3rem;
-    font-family: 'Orbitron', sans-serif;
-    color: #ff00ff;
+    font-weight: 600;
+    color: #6e40c9;
     text-transform: uppercase;
-    border-bottom: 2px solid rgba(255, 0, 255, 0.8);
+    border-bottom: 2px solid rgba(64, 201, 255, 0.3);
     padding-bottom: 5px;
     margin-top: 20px;
 }
@@ -108,26 +148,34 @@ h3 {
     padding: 10px 20px;
     font-size: 1rem;
     margin: 10px;
-    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    background: linear-gradient(90deg, #6e40c9, #40c9ff);
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
     transition: filter 0.3s ease-in-out;
 }
 
+.button a {
+   
+    color: #fff;
+    font-size: 1rem;
+}
+
 .button:hover {
-    filter: brightness(1.5);
+    filter: brightness(1.4);
 }
 
 a,
 p,
 ul {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #2a2a2a;
+    line-height: 1.8;
+    letter-spacing: 0.25px;
     text-decoration: none;
 }
 
@@ -145,7 +193,7 @@ ul {
     height: 250px;
     object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
+    box-shadow: 0px 0px 10px rgba(64, 201, 255, 0.4); /* soft neon blue */
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -153,6 +201,7 @@ ul {
 .gallery img:hover {
     transform: scale(1.05);
     z-index: 10;
+    box-shadow: 0px 0px 20px rgba(64, 201, 255, 0.6); /* stronger neon hover */
 }
 
 .gallery-wrapper {
@@ -165,7 +214,7 @@ ul {
 .arrow {
     background: none;
     border: none;
-    color: #ff00ff;
+    color: #6e40c9;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1;
@@ -204,9 +253,162 @@ ul {
 .footer {
     text-align: center;
     padding: 20px;
-    background: #121212;
-    border-top: 2px solid rgba(255, 0, 255, 0.6);
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
     margin-top: 50px;
     font-size: 1rem;
-    color: #e0e0e0;
+    color: #555;
+}
+
+.project-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6e40c9;
+    border-bottom: 2px solid #6e40c9;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    color: #40c9ff;
+    border-color: #40c9ff;
+}
+
+/* New grid style for project cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    min-height: 200px;
+    background: #f9f8fb;
+    font-family: 'Manrope', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    gap: 25px;
+}
+
+.grid-item img {
+    width: 180px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.grid-item-content {
+    flex: 1;
+    text-align: left;
+    font-family: 'Manrope', sans-serif;
+}
+
+.grid-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px;
+}
+
+.grid-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: #444;
+}
+
+#gridView {
+  display: none;
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.view-toggle button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #6e40c9;
+  border-radius: 6px;
+  background: #fff;
+  color: #6e40c9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-toggle button.active,
+.view-toggle button:hover {
+  background: #6e40c9;
+  color: #fff;
+}
+.grid-link {
+display: flex;
+align-items: center;
+text-decoration: none;
+color: inherit;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.grid-item img {
+transition: transform 0.3s ease;
+filter: brightness(95%);
+}
+
+
+
+.grid-item-content h2 {
+margin-bottom: 10px;
+font-weight: 700;
+transition: color 0.3s ease;
+}
+
+.navbar-title {
+position: absolute;
+left: 30px;
+top: 50%;
+transform: translateY(-50%);
+display: flex;
+align-items: center;
+gap: 10px;
+font-family: 'Orbitron', sans-serif;
+font-weight: 700;
+font-size: 1.1rem;
+color: #6e40c9;
+opacity: 0;
+transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.navbar-title img {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+}
+
+.navbar.sticky .navbar-title {
+opacity: 1;
 }
