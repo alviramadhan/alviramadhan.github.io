@@ -412,3 +412,67 @@ border-radius: 50%;
 .navbar.sticky .navbar-title {
 opacity: 1;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 0 0 0;
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 60px 20px 40px;
+    }
+
+    .project {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .grid-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .grid-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
